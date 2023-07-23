@@ -1,16 +1,18 @@
-from faker import Faker
+"""Module homework #5"""
+
 import argparse
+from faker import Faker
 
 
-def generatingaGreeting() -> None:
+def generate_greeting() -> None:
     """Generates a greeting"""
-    name = getNameFromArgument()
+    name = get_name_from_argument()
     if not name:
-        name = generatingName()
-    printGreetingForUser(name)
+        name = generating_name()
+    print_greeting_for_user(name)
 
 
-def getNameFromArgument() -> str | None:
+def get_name_from_argument() -> str | None:
     """Get the name from the argument
 
     Returns
@@ -36,7 +38,7 @@ def getNameFromArgument() -> str | None:
     return None
 
 
-def generatingName() -> str:
+def generating_name() -> str:
     """Generating name with faker
 
     Returns
@@ -48,7 +50,7 @@ def generatingName() -> str:
     return faker.name()
 
 
-def printGreetingForUser(name: str) -> None:
+def print_greeting_for_user(name: str) -> None:
     """Print Greeting for User with name
 
     Parameters
@@ -64,4 +66,11 @@ def printGreetingForUser(name: str) -> None:
 
 
 def main():
-    generatingaGreeting()
+    """
+    Generate greeting entry point
+
+    Returns
+    -------
+    None
+    """
+    generate_greeting()

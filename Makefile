@@ -12,7 +12,7 @@ d-homework-i-purge:
 # Just run
 d-run:
 	@COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 \
-		docker compose up --build -e USERNAME=$(USERNAME)
+		USERNAME=$(USERNAME) docker compose up --build
 
 .PHONY: d-stop
 # Stop services
