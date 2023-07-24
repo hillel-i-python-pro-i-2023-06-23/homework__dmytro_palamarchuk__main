@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    environment:
+      - USERNAME=${USERNAME}
+    command:
+      sh -c 'if [ ! -z "$USERNAME" ]; then'
+        -u "$USERNAME"
+      '; fi'
+      
